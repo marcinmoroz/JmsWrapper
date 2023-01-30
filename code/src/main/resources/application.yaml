@@ -1,0 +1,5 @@
+rest:
+  connectionTimeout: '${spring.rest.connectionTimeout}'
+  readTimeout: '${spring.rest.readTimeout}'
+  maxConnectionsTotal: '${spring.rest.maxConnectionsTotal}'
+  maxConnectionsPerRoute: '${spring.rest.maxConnectionsPerRoute}'
