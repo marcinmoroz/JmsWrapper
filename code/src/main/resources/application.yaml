@@ -1,5 +1,8 @@
 rest:
-  connectionTimeout: '${spring.rest.connectionTimeout}'
-  readTimeout: '${spring.rest.readTimeout}'
-  maxConnectionsTotal: '${spring.rest.maxConnectionsTotal}'
-  maxConnectionsPerRoute: '${spring.rest.maxConnectionsPerRoute}'
+  connectionTimeout: 5000
+  readTimeout: 5000
+  maxConnectionsTotal: 50
+  maxConnectionsPerRoute: 50
+
+springdoc:
+  show-actuator: true
