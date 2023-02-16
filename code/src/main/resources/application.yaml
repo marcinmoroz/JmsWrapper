@@ -1,3 +1,5 @@
+management.health.jms.enabled: false
+
 rest:
   connectionTimeout: 5000
   readTimeout: 5000
