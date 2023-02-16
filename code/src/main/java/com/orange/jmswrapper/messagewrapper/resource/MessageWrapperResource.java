@@ -25,9 +25,19 @@ public class MessageWrapperResource {
             @ApiResponse(responseCode = "200", description = "Operation completed successfully"),
             @ApiResponse(responseCode = "400", description = "Invalid request"),
             @ApiResponse(responseCode = "500", description = "Internal error")})
-    @GetMapping(value = "processMessage")
+    @PostMapping(value = "processMessage")
     @ResponseStatus(HttpStatus.OK)
     public CompletableFuture<Void> processMessage(@RequestBody MessageWrapDTO message) {
         return service.processMessage(message, ChannelType.HTTP);
+    }
+    @Operation(summary = "List cconfiguration")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Operation completed successfully"),
+            @ApiResponse(responseCode = "400", description = "Invalid request"),
+            @ApiResponse(responseCode = "500", description = "Internal error")})
+    @GetMapping(value = "listConfiguration")
+    @ResponseStatus(HttpStatus.OK)
+    public CompletableFuture<String> listConfiguration() {
+        return service.listConfiguration();
     }
 }

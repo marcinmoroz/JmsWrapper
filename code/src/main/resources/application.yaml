@@ -6,3 +6,15 @@ rest:
 
 springdoc:
   show-actuator: true
+
+wrapper-config:
+  wrappers:
+    -
+      channelName: "test1"
+      inputChannel: "HTTP"
+      outputChannel: "JMS"
+    -
+      channelName: "test2"
+      inputChannel: "HTTP"
+      outputChannel: "JMS"
+
