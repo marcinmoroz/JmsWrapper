@@ -10,11 +10,21 @@ springdoc:
 wrapper-config:
   wrappers:
     -
-      channelName: "test1"
-      inputChannel: "HTTP"
-      outputChannel: "JMS"
+      destination: "test1"
+      input:
+        type: "HTTP"
+        url: "http://localhost:8080/test"
+      output:
+        type: "JMS"
+        url: "tcp://localhost:8080"
+        channel: "test1"
     -
-      channelName: "test2"
-      inputChannel: "HTTP"
-      outputChannel: "JMS"
+      destination: "test2"
+      input:
+        type: "HTTP"
+        url: "http://localhost:8080/test"
+      output:
+        type: "JMS"
+        url: "tcp://localhost:8080"
+        channel: "test1"
 

@@ -18,6 +18,7 @@ public class MessageWrapperService {
     private final WrapperConfiguration configuration;
 
     public CompletableFuture<Void> processMessage(MessageWrapDTO message, ChannelType inputChannel) {
+        log.trace("Processing message from channel : " + inputChannel +" || message : " + message);
         return null;
     }
 

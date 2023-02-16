@@ -4,16 +4,16 @@ import lombok.Data;
 
 @Data
 public class Wrapper {
-    private String channelName;
-    private ChannelType inputChannel;
-    private ChannelType outputChannel;
+    private String destination;
+    private ChannelProperties input;
+    private ChannelProperties output;
 
     @Override
     public String toString() {
         return "Wrapper{" +
-                "channelName='" + channelName + '\'' +
-                ", inputChannel=" + inputChannel +
-                ", outputChannel=" + outputChannel +
+                "channelName='" + destination + '\'' +
+                ", input=" + input +
+                ", output=" + output +
                 '}';
     }
 }
